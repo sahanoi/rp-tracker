@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformer Pilates Keşif Anketi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d3436;
+            --secondary: #636e72;
+            --accent: #0984e3;
+            --bg: #f5f6fa;
+            --card-bg: #ffffff;
+            --border: #dfe6e9;
+            --text: #2d3436;
+            --text-muted: #636e72;
+            --radius: 12px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .survey-section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            animation: fadeInUp 0.8s ease-out both;
+        }
+
+        .survey-section:nth-child(2) { animation-delay: 0.1s; }
+        .survey-section:nth-child(3) { animation-delay: 0.2s; }
+        .survey-section:nth-child(4) { animation-delay: 0.3s; }
+        .survey-section:nth-child(5) { animation-delay: 0.4s; }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title span {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            background: rgba(9, 132, 227, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        .question-group {
+            margin-bottom: 32px;
+        }
+
+        .question-group:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 500;
+            font-size: 1.05rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            background-color: var(--bg);
+            font-family: inherit;
+            font-size: 1rem;
+            color: var(--text);
+            transition: var(--transition);
+            resize: none;
+            overflow: hidden;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background-color: var(--card-bg);
+            box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .survey-section {
+                box-shadow: none;
+                border: 1px solid #eee;
+                break-inside: avoid;
+                margin-bottom: 20px;
+                padding: 20px;
+            }
+            .footer {
+                display: none;
+            }
+            textarea {
+                border: 1px solid #eee;
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reformer Pilates Keşif Anketi</h1>
+            <p>Bu anketin amacı, standart spor salonu takibi ile Pilates sanatı arasındaki boşluğu doldurmaktır. Bir Pilates vücudunun gerçekte nasıl çalıştığını anlayan bir uygulama geliştirmek istiyoruz.</p>
+        </header>
+
+        <form>
+            <!-- Bölüm 1 -->
+            <section class="survey-section">
+                <div class="section-title">
+                    <span>Prensipler</span>
+                    <h2>Pilates'in "Ruhu"</h2>
+                </div>
+
+                <div class="question-group">
+                    <label>1. Büyük Altılı: Pilates; Merkezleme, Konsantrasyon, Kontrol, Kesinlik, Nefes ve Akış prensiplerine dayanır. Eğer bunları takip etseydik, bir uygulayıcı için hangisini görmek en önemlisi olurdu?</label>
+                    <textarea placeholder="Düşüncelerinizi paylaşın..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>2. "Kalite" Farkı: Bir eğitmen olarak "hareket kalitesini" sadece saymak dışında nasıl ölçersiniz?</label>
+                    <textarea placeholder="Eğitmen gözüyle değerlendirmeniz..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>3. Zihin-Vücut Bağlantısı: "Zihinsel Odaklanma" veya "Nefes Senkronizasyonu"nun bir metrik olarak takip edilmesinin değerli olduğunu düşünüyor musunuz?</label>
+                    <textarea placeholder="Metrik önerileriniz..."></textarea>
+                </div>
+            </section>
+
+            <!-- Bölüm 2 -->
+            <section class="survey-section">
+                <div class="section-title">
+                    <span>Ekipman</span>
+                    <h2>Mekanik ve Ekipman</h2>
+                </div>
+
+                <div class="question-group">
+                    <label>4. Yaylar vs. Ağırlıklar: Daha az yay direnci genellikle bir egzersizi daha zor hale getirir. Yayları uygulamada nasıl kaydetmeliyiz?</label>
+                    <textarea placeholder="Örn: 'İki Sarı, Bir Kırmızı' mı yoksa genel bir direnç seviyesi mi?"></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>5. Ekipman Kurulumu: "Ayak Barı Pozisyonu" veya "Başlık Ayarı" takip edilmesini gerektirecek kadar sık değişiyor mu?</label>
+                    <textarea placeholder="Kullanım alışkanlıklarınız..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>6. Destek Ekipmanları (Props): Reformer hareketlerine ne sıklıkla aksesuar (Çember, Top vb.) eklersiniz? Özel bir seçeneğe ihtiyaç var mı?</label>
+                    <textarea placeholder="En sık kullandığınız aksesuarlar..."></textarea>
+                </div>
+            </section>
+
+            <!-- Bölüm 3 -->
+            <section class="survey-section">
+                <div class="section-title">
+                    <span>Kullanıcı Deneyimi</span>
+                    <h2>Takip ve İlerleme</h2>
+                </div>
+
+                <div class="question-group">
+                    <label>7. Geçiş "Akışı": Uygulama "Geçiş Süresini" mi yoksa sadece egzersizleri mi takip etmeli?</label>
+                    <textarea placeholder="Akışın takibi hakkındaki görüşünüz..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>8. İlerleme: Birinin Pilates'te "seviye atladığını" nasıl anlarsınız? Daha az destek mi, yoksa daha fazla tekrar mı?</label>
+                    <textarea placeholder="İlerleme kriterleriniz..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>9. Hevy Karşılaştırması: Spor salonu uygulamalarında Pilates seansı kaydetmeye çalışırken en çok "yanlış" bulduğunuz şey nedir?</label>
+                    <textarea placeholder="Deneyimlediğiniz zorluklar..."></textarea>
+                </div>
+            </section>
+
+            <!-- Bölüm 4 -->
+            <section class="survey-section">
+                <div class="section-title">
+                    <span>Eğitmen Gözüyle</span>
+                    <h2>Eğitmen Perspektifi</h2>
+                </div>
+
+                <div class="question-group">
+                    <label>10. Seans Hedefleri: Bir seansı planlarken "Kas Grupları" üzerinden mi yoksa "Omurga Düzlemleri" üzerinden mi düşünürsünüz?</label>
+                    <textarea placeholder="Planlama mantığınız..."></textarea>
+                </div>
+
+                <div class="question-group">
+                    <label>11. Danışan Geri Bildirimi: Danışanlarınızın ilerlemeleri hakkında size en sık sorduğu veri nedir?</label>
+                    <textarea placeholder="En çok merak edilen veriler..."></textarea>
+                </div>
+            </section>
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2026 Reformer Pilates Tracker - Discovery Phase</p>
+        </div>
+    </div>
+
+    <script>
+        // Auto-expanding textareas
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                this.style.height = 'auto';
+                this.style.height = (this.scrollHeight) + 'px';
+            });
+        });
+
+        // Trigger auto-expand on focus potentially if there's pre-filled text (none here)
+        window.addEventListener('load', () => {
+            document.querySelectorAll('textarea').forEach(textarea => {
+                textarea.style.height = 'auto';
+                textarea.style.height = (textarea.scrollHeight) + 'px';
+            });
+        });
+    </script>
+</body>
+</html>

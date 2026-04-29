@@ -1,0 +1,18 @@
+{
+  "name": "reformer-pilates-tracker",
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "packages/shared"
+  ],
+  "scripts": {
+    "postinstall": "patch-package",
+    "build:shared": "npm run build -w @reformer/shared",
+    "test": "npm run build:shared && npm run test -w @reformer/shared && npm run test -w mobile",
+    "dev": "npm run dev -w mobile",
+    "web": "npm run web -w mobile"
+  },
+  "devDependencies": {
+    "patch-package": "^8.0.1"
+  }
+}
