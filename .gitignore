@@ -8,3 +8,4 @@ web-build/
 **/.env.local
 *.tsbuildinfo
 .kotlin/
+tools/exercise-image-prompts/out/

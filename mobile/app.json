@@ -35,6 +35,23 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "featureFlags": {
+        "enableRemoteCatalogOverlay": true,
+        "enableCoachClientV1": true,
+        "enableSessionMergePrompts": true
+      },
+      "firebaseApiKey": "AIzaSyBlF_ACCc-6JJWJLj5HwK6Yxj_0y-mmpco",
+      "firebaseAuthDomain": "reformer-pilates-tracker.firebaseapp.com",
+      "firebaseProjectId": "reformer-pilates-tracker",
+      "firebaseStorageBucket": "reformer-pilates-tracker.firebasestorage.app",
+      "firebaseMessagingSenderId": "919119058939",
+      "firebaseAppId": "1:919119058939:web:4a1f8c9d9a6da6f8e3dd5e",
+      "router": {},
+      "eas": {
+        "projectId": "938fce03-4ffd-47e1-b201-96369fd8127e"
+      }
     }
   }
 }

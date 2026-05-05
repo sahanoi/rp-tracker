@@ -12,19 +12,47 @@ import {
 
 import { useSessionDraft } from "@/contexts/SessionDraftContext";
 import { formatSessionDateTime } from "@/lib/formatSession";
+import {
+  loadRoutineTemplates,
+  type RoutineTemplate,
+} from "@/lib/routineStorage";
 
 export default function SessionStartPage() {
   const { beginSession } = useSessionDraft();
   const [name, setName] = useState("");
   const [nowMs, setNowMs] = useState(Date.now());
+  const [routines, setRoutines] = useState<RoutineTemplate[]>([]);
+  const [selectedRoutineId, setSelectedRoutineId] = useState<string | null>(
+    null
+  );
 
   useEffect(() => {
     const id = setInterval(() => setNowMs(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
 
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const list = await loadRoutineTemplates();
+      if (!cancelled) setRoutines(list);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const selectedRoutine =
+    selectedRoutineId == null
+      ? null
+      : routines.find((r) => r.id === selectedRoutineId) ?? null;
+
   function onContinue() {
-    const ok = beginSession(name);
+    const ok = beginSession(name, {
+      routineTemplateId: selectedRoutine?.id ?? null,
+      routineTemplateName: selectedRoutine?.name ?? null,
+      baselineExerciseIds: selectedRoutine?.exerciseIds ?? null,
+    });
     if (!ok) return;
     router.push("/session/workout");
   }
@@ -35,7 +63,7 @@ export default function SessionStartPage() {
       className="flex-1 bg-background"
     >
       <ScrollView
-        className="mx-auto w-full max-w-md flex-1 px-4 pb-8 pt-3"
+        className="w-full flex-1 px-4 pb-8 pt-3"
         keyboardShouldPersistTaps="handled"
       >
         <View className="mb-6 flex-row items-center justify-between">
@@ -57,7 +85,9 @@ export default function SessionStartPage() {
           Oturum adı
         </Text>
         <Text className="mb-4 text-sm text-muted">
-          Bu ad kayıtlarında görünür. Başlangıç zamanı otomatik kaydedilir.
+          Devam dediğinde antrenman oturumu başlar: üstte süre sayacı çalışır,
+          egzersizleri sırayla eklersin. Bu ad kayıtlarında görünür. İstersen rutin
+          şablonu seç; kapanışta liste değiştiyse rutini güncellemeyi sorarız.
         </Text>
 
         <TextInput
@@ -65,17 +95,52 @@ export default function SessionStartPage() {
           onChangeText={setName}
           placeholder="Örn. Sabah mat akışı"
           placeholderTextColor="#a3a3a360"
-          className="mb-6 rounded-2xl bg-surface px-4 py-3.5 text-base text-foreground ring-1 ring-border-subtle"
+          className="mb-4 rounded-2xl bg-surface px-4 py-3.5 text-base text-foreground ring-1 ring-border-subtle"
           autoCapitalize="sentences"
           returnKeyType="done"
           onSubmitEditing={onContinue}
         />
 
-        <View className="mb-8 rounded-2xl bg-surface p-4 ring-1 ring-border-subtle">
+        <Text className="mb-2 text-sm font-medium text-foreground">
+          Rutin (isteğe bağlı)
+        </Text>
+        <Pressable
+          onPress={() => setSelectedRoutineId(null)}
+          className={`mb-2 rounded-2xl px-4 py-3 ring-1 ${
+            selectedRoutineId == null
+              ? "bg-accent/20 ring-accent"
+              : "bg-surface ring-border-subtle"
+          }`}
+        >
+          <Text className="text-sm font-medium text-foreground">
+            Serbest oturum
+          </Text>
+          <Text className="text-xs text-muted">
+            Şablondan sapma sorusu çıkmaz.
+          </Text>
+        </Pressable>
+        {routines.map((r) => (
+          <Pressable
+            key={r.id}
+            onPress={() => setSelectedRoutineId(r.id)}
+            className={`mb-2 rounded-2xl px-4 py-3 ring-1 ${
+              selectedRoutineId === r.id
+                ? "bg-accent/20 ring-accent"
+                : "bg-surface ring-border-subtle"
+            }`}
+          >
+            <Text className="text-sm font-medium text-foreground">{r.name}</Text>
+            <Text className="text-xs text-muted">
+              {r.exerciseIds.length} egzersiz · şablon
+            </Text>
+          </Pressable>
+        ))}
+
+        <View className="mb-8 mt-4 rounded-2xl bg-surface p-4 ring-1 ring-border-subtle">
           <Text className="mb-1 text-[10px] font-medium uppercase tracking-wide text-muted">
             Başlangıç zamanı
           </Text>
-          <Text className="font-mono text-lg text-foreground">
+          <Text className="text-lg text-foreground">
             {formatSessionDateTime(nowMs)}
           </Text>
         </View>

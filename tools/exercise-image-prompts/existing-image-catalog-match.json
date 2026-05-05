@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "description": "Catalog matches for currently available images, independent from demo selection.",
+  "imageRoot": "SRC BY USER/exercise images",
+  "matchedCount": 11,
+  "matches": [
+    {
+      "id": "breathing__breathing",
+      "categoryId": "breathing",
+      "titleEn": "Breathing",
+      "titleTr": "Temel Nefes",
+      "imageFile": "breathing__breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__breathing.jpg"
+    },
+    {
+      "id": "breathing__lateral-breathing",
+      "categoryId": "breathing",
+      "titleEn": "Lateral Breathing",
+      "titleTr": "Lateral Nefes",
+      "imageFile": "breathing__lateral-breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__lateral-breathing.jpg"
+    },
+    {
+      "id": "breathing__diaphragmatic-breathing",
+      "categoryId": "breathing",
+      "titleEn": "Diaphragmatic Breathing",
+      "titleTr": "Diyafram Nefesi",
+      "imageFile": "breathing__diaphragmatic-breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__diaphragmatic-breathing.jpg"
+    },
+    {
+      "id": "breathing__percussive-breathing",
+      "categoryId": "breathing",
+      "titleEn": "Percussive Breathing",
+      "titleTr": "Perkütif Nefes",
+      "imageFile": "breathing__percussive-breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__percussive-breathing.jpg"
+    },
+    {
+      "id": "breathing__breathing-with-arm-reach",
+      "categoryId": "breathing",
+      "titleEn": "Breathing with Arm Reach",
+      "titleTr": "Kollu Nefes",
+      "imageFile": "breathing__breathing-with-arm-reach.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__breathing-with-arm-reach.jpg"
+    },
+    {
+      "id": "breathing__rib-cage-breathing",
+      "categoryId": "breathing",
+      "titleEn": "Rib Cage Breathing",
+      "titleTr": "Kaburga Nefesi",
+      "imageFile": "breathing__rib-cage-breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__rib-cage-breathing.jpg"
+    },
+    {
+      "id": "breathing__breathing-on-reformer",
+      "categoryId": "breathing",
+      "titleEn": "Breathing on Reformer",
+      "titleTr": "Reformerde Nefes",
+      "imageFile": "breathing__breathing-on-reformer.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__breathing-on-reformer.jpg"
+    },
+    {
+      "id": "breathing__cadillac-breathing",
+      "categoryId": "breathing",
+      "titleEn": "Cadillac Breathing",
+      "titleTr": "Cadillac Nefesi",
+      "imageFile": "breathing__cadillac-breathing.jpg",
+      "imagePath": "SRC BY USER/exercise images/breathing__cadillac-breathing.jpg"
+    },
+    {
+      "id": "reformer-core__footwork-toes",
+      "categoryId": "reformer-core",
+      "titleEn": "Footwork — Toes",
+      "titleTr": "Ayak Çalışması (Parmaklar)",
+      "imageFile": "reformer-core__footwork-toes.jpg",
+      "imagePath": "SRC BY USER/exercise images/reformer-core__footwork-toes.jpg"
+    },
+    {
+      "id": "reformer-core__footwork-arches",
+      "categoryId": "reformer-core",
+      "titleEn": "Footwork — Arches",
+      "titleTr": "Ayak Çalışması (Kemeri)",
+      "imageFile": "reformer-core__footwork-arches.jpg",
+      "imagePath": "SRC BY USER/exercise images/reformer-core__footwork-arches.jpg"
+    },
+    {
+      "id": "reformer-core__footwork-heels",
+      "categoryId": "reformer-core",
+      "titleEn": "Footwork — Heels",
+      "titleTr": "Ayak Çalışması (Topuklar)",
+      "imageFile": "reformer-core__footwork-heels.jpg",
+      "imagePath": "SRC BY USER/exercise images/reformer-core__footwork-heels.jpg"
+    }
+  ]
+}

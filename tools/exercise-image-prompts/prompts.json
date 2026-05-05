@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "description": "28 trial prompts (2 per category). ids match makeStableExerciseId in mobile/lib/reformerExerciseCatalog.ts",
+  "styleFile": "style-prefix.txt",
+  "suggestedAspectRatios": ["4:5", "1:1"],
+  "prompts": [
+    {
+      "id": "breathing__breathing",
+      "categoryId": "breathing",
+      "titleEn": "Breathing",
+      "titleTr": "Temel Nefes",
+      "scene": "Supine on a mat, neutral pelvis. Hands resting on lower ribs to suggest lateral breathing; calm ribcage expansion cue. Side view slightly elevated so ribs and spine read clearly. No reformer."
+    },
+    {
+      "id": "breathing__breathing-on-reformer",
+      "categoryId": "breathing",
+      "titleEn": "Breathing on Reformer",
+      "titleTr": "Reformerde Nefes",
+      "scene": "Supine on a Pilates reformer carriage, head toward shoulder rests, reformer frame and footbar visible but simplified. Hands lightly on ribcage, relaxed breathing cue. Three-quarter view so rails read as a reformer."
+    },
+    {
+      "id": "reformer-core__footwork-toes",
+      "categoryId": "reformer-core",
+      "titleEn": "Footwork — Toes",
+      "titleTr": "Ayak Çalışması (Parmaklar)",
+      "scene": "Supine on reformer carriage, balls of feet on the footbar in Pilates footwork “toes” position, legs at a slight outward angle readable from foot shape. Reformer silhouette clear: carriage, footbar, headrest. Side view."
+    },
+    {
+      "id": "reformer-core__hundred",
+      "categoryId": "reformer-core",
+      "titleEn": "Hundred",
+      "titleTr": "Yüzler",
+      "scene": "Supine on reformer in Hundred: upper torso curled forward slightly, arms long and low pumping, legs extended at a classical diagonal or tabletop—pick one and keep it clean. Suggest straps with simple handles near hands (avoid tangled ropes). Side view."
+    },
+    {
+      "id": "reformer-rowing__rowing-into-the-sternum",
+      "categoryId": "reformer-rowing",
+      "titleEn": "Rowing — Into the Sternum",
+      "titleTr": "Kürek — Göğüse",
+      "scene": "Seated on reformer facing footbar, classical rowing setup implied with a few clean lines only, torso tall, arms bent drawing the straps toward the sternum in mid-pull. Three-quarter back view so mid-back engagement reads."
+    },
+    {
+      "id": "reformer-rowing__chest-expansion",
+      "categoryId": "reformer-rowing",
+      "titleEn": "Chest Expansion",
+      "titleTr": "Göğüs Açma",
+      "scene": "Tall kneeling on reformer carriage, holding reformer ropes, arms open in a chest expansion moment, sternum lifted. Reform frame minimal behind. Front-three-quarter view."
+    },
+    {
+      "id": "reformer-longbox__swan-on-long-box",
+      "categoryId": "reformer-longbox",
+      "titleEn": "Swan on Long Box",
+      "titleTr": "Kuğu (Uzun Kutu)",
+      "scene": "Prone on a long box on the reformer, hands on footbar or stable support ahead, gentle swan extension through upper back; hips stable on box. Side view; long box reads as a padded rectangle on the carriage."
+    },
+    {
+      "id": "reformer-longbox__teaser-on-long-box",
+      "categoryId": "reformer-longbox",
+      "titleEn": "Teaser on Long Box",
+      "titleTr": "Teaser (Uzun Kutu)",
+      "scene": "Balanced V-shape teaser seated on long box, legs lifted near eye level, arms parallel to legs, straps implied lightly in hands. Side view; emphasize long spine and open V."
+    },
+    {
+      "id": "reformer-shortbox__short-box-round",
+      "categoryId": "reformer-shortbox",
+      "titleEn": "Short Box — Round",
+      "titleTr": "Kısa Kutu (Yuvarlak)",
+      "scene": "Seated on short box, feet under a simple strap line across ankles, holding a short box bar vertical, smooth C-curve “round” spine, sternum soft, head following curve. Side view. Minimal reformer base suggested."
+    },
+    {
+      "id": "reformer-shortbox__tree-on-short-box",
+      "categoryId": "reformer-shortbox",
+      "titleEn": "Tree on Short Box",
+      "titleTr": "Ağaç (Kısa Kutu)",
+      "scene": "Seated on short box, one leg lifted and held in a “tree” shape, other leg anchored under strap implied; tall spine. Front-three-quarter view."
+    },
+    {
+      "id": "reformer-stretch__elephant",
+      "categoryId": "reformer-stretch",
+      "titleEn": "Elephant",
+      "titleTr": "Fil",
+      "scene": "Standing on reformer carriage in Elephant: hands on footbar, hips high, spine long, classic pike-like elephant silhouette. Footbar and rails obvious. Side view."
+    },
+    {
+      "id": "reformer-stretch__stomach-massage-round",
+      "categoryId": "reformer-stretch",
+      "titleEn": "Stomach Massage — Round",
+      "titleTr": "Mide Masajı (Yuvarlak)",
+      "scene": "Seated on reformer facing footbar, hands on front edge, rounded C-spine “round back” stomach massage position, knees bent, feet area simplified on headrest zone. Three-quarter side-front view."
+    },
+    {
+      "id": "reformer-straps__feet-in-straps-circles",
+      "categoryId": "reformer-straps",
+      "titleEn": "Feet in Straps — Circles",
+      "titleTr": "Kayışta Bacak Çevrimleri",
+      "scene": "Supine on reformer, feet in soft loops, legs mid-air in one clear moment of a large leg circle path. Carriage and straps simplified. Side view; legs focal."
+    },
+    {
+      "id": "reformer-straps__side-splits",
+      "categoryId": "reformer-straps",
+      "titleEn": "Side Splits",
+      "titleTr": "Yan Açılım",
+      "scene": "Standing side splits on reformer: one foot on stable platform, one foot on carriage, legs wide in lateral split line, arms open lightly for balance. Front or three-quarter view facing the split plane."
+    },
+    {
+      "id": "reformer-advanced__corkscrew",
+      "categoryId": "reformer-advanced",
+      "titleEn": "Corkscrew",
+      "titleTr": "Tirbuşon",
+      "scene": "Supine on reformer with shoulder blocks, legs long and vertical together toward ceiling, subtle hip spiral suggesting corkscrew—no busy motion graphics, no extra text. Side view; vertical legs dominate the composition."
+    },
+    {
+      "id": "reformer-advanced__mermaid",
+      "categoryId": "reformer-advanced",
+      "titleEn": "Mermaid",
+      "titleTr": "Deniz Kızı",
+      "scene": "Side-sitting mermaid stretch on reformer carriage: one hand on carriage behind for support, opposite arm sweeping overhead in a side bend arc. Side view; lateral flexion reads clearly."
+    },
+    {
+      "id": "cadillac__roll-down-rollback-bar",
+      "categoryId": "cadillac",
+      "titleEn": "Roll Down — Rollback Bar",
+      "titleTr": "Geri Yatış (Rollback Bar)",
+      "scene": "On Cadillac table facing a rollback bar from overhead springs, seated tall rolling the spine through a controlled roll-down moment while holding the bar. Cadillac frame minimal but recognizable. Side view; sequential flexion readable."
+    },
+    {
+      "id": "cadillac__leg-springs-frogs",
+      "categoryId": "cadillac",
+      "titleEn": "Leg Springs — Frogs",
+      "titleTr": "Bacak Yayları — Kurbağa",
+      "scene": "Supine on Cadillac table, legs in leg springs, frog legs: heels together, knees apart, feet in soft loops implied. Flat table pad. Side or angled view focused on legs."
+    },
+    {
+      "id": "mat__the-hundred",
+      "categoryId": "mat",
+      "titleEn": "The Hundred",
+      "titleTr": "Yüzler (Mat)",
+      "scene": "Supine on mat only, head and shoulders curled up, arms pumping slightly beside hips, legs extended at a classical low angle. No equipment. Side view."
+    },
+    {
+      "id": "mat__teaser",
+      "categoryId": "mat",
+      "titleEn": "Teaser",
+      "titleTr": "Teaser",
+      "scene": "Seated teaser on mat: balanced on sit bones, legs and torso forming a clean V, arms parallel to legs. Side view."
+    },
+    {
+      "id": "ball__hundred-with-ball",
+      "categoryId": "ball",
+      "titleEn": "Hundred with Ball",
+      "titleTr": "Yüzler (Topla)",
+      "scene": "Supine on mat, small Pilates ball between ankles, hundred chest-lift position, arms pumping at hips. Side view; ball reads as a simple sphere between legs."
+    },
+    {
+      "id": "ball__plank-on-stability-ball",
+      "categoryId": "ball",
+      "titleEn": "Plank on Stability Ball",
+      "titleTr": "Büyük Topla Plank",
+      "scene": "High plank with shins on a large stability ball, hands on floor, straight line head to heels. Side view; ball clearly oversized."
+    },
+    {
+      "id": "magic-circle__hundred-with-magic-circle",
+      "categoryId": "magic-circle",
+      "titleEn": "Hundred with Magic Circle",
+      "titleTr": "Yüzler (Halkaya)",
+      "scene": "Supine mat hundred position, magic circle held between palms just above shins with gentle inward press; ring is a simple grey ellipse with two small pads—no text on props. Side view."
+    },
+    {
+      "id": "magic-circle__teaser-with-circle",
+      "categoryId": "magic-circle",
+      "titleEn": "Teaser with Circle",
+      "titleTr": "Teaser (Halkaya)",
+      "scene": "Mat teaser V-balance, magic circle between ankles or calves with light squeeze; arms forward or along legs for balance—keep it simple. Side view."
+    },
+    {
+      "id": "chair__footwork-on-chair",
+      "categoryId": "chair",
+      "titleEn": "Footwork on Chair",
+      "titleTr": "Ayak Çalışması (Sandalye)",
+      "scene": "Pilates Wunda chair footwork: standing on platform with foot/feet on pedal, hands lightly on chair top for balance, pedal slightly depressed—simplify springs. Side view; chair reads as box + pedal."
+    },
+    {
+      "id": "chair__pike-on-chair",
+      "categoryId": "chair",
+      "titleEn": "Pike on Chair",
+      "titleTr": "Sandalyede Pike",
+      "scene": "Pike on Pilates chair: hips high, hands on chair edges, body folded into a strong inverted V over the chair, legs straight downward. Side view; graphic triangular silhouette."
+    },
+    {
+      "id": "barrel__spine-stretch-on-barrel",
+      "categoryId": "barrel",
+      "titleEn": "Spine Stretch on Barrel",
+      "titleTr": "Varil Üstü Omurga Germe",
+      "scene": "Seated straddle forward stretch over an arc barrel: torso rounded forward, arc clearly supporting the spine path. Side view."
+    },
+    {
+      "id": "barrel__mermaid-on-spine-corrector",
+      "categoryId": "barrel",
+      "titleEn": "Mermaid on Spine Corrector",
+      "titleTr": "Omurga Düzelticisinde Deniz Kızı",
+      "scene": "Mermaid side bend seated on a spine corrector arc: one hip on arc, overhead arm making a long lateral line, other hand on barrel for support. Side view; arc silhouette obvious."
+    }
+  ]
+}

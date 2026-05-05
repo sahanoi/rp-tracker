@@ -1,3 +1,4 @@
+import type { ImageContentFit } from "expo-image";
 import { Image } from "expo-image";
 import { Text, View } from "react-native";
 
@@ -7,12 +8,14 @@ type Props = {
   source?: WorkoutExerciseMediaSource | null;
   className?: string;
   placeholderLabel?: string;
+  contentFit?: ImageContentFit;
 };
 
 export function ExerciseMedia({
   source,
   className = "",
   placeholderLabel = "Add image or GIF in workout catalog",
+  contentFit = "cover",
 }: Props) {
   const empty =
     source == null ||
@@ -38,7 +41,7 @@ export function ExerciseMedia({
     <Image
       source={imageSource}
       className={className}
-      contentFit="cover"
+      contentFit={contentFit}
     />
   );
 }

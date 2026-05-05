@@ -34,7 +34,7 @@ export default function HomePage() {
         <Pressable className="mb-8 flex w-full flex-row items-center justify-center gap-2 rounded-2xl bg-accent py-3.5 active:opacity-90">
           <Text className="text-lg leading-none text-black">+</Text>
           <Text className="text-center text-sm font-semibold text-black">
-            Start empty workout
+            Oturum başlat (serbest veya rutin)
           </Text>
         </Pressable>
       </Link>
@@ -154,10 +154,10 @@ export default function HomePage() {
                   {s.exercises.slice(0, 8).map((ex, i) => (
                     <Text
                       key={`${s.id}-${i}-${ex.name}`}
-                      className="text-xs text-muted"
+                      className="text-xs text-muted whitespace-pre-line"
                     >
                       · {ex.name}
-                      {ex.sets ? ` (${ex.sets})` : ""}
+                      {ex.sets ? `\n${ex.sets}` : ""}
                     </Text>
                   ))}
                 </View>

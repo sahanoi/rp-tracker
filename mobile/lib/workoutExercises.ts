@@ -1,127 +1,60 @@
-export const WORKOUT_EXERCISE_IDS = [
-  "mekik",
-  "toe-tap-parmak",
-  "arka-kol",
-  "side-kick",
-  "pilates-topunu-yakala",
-  "kol-egzersizi",
-  "arka-bacak",
-  "cember-egzersizi",
-  "pilates-topu-kopru",
-  "yan-govde",
-  "cadillac-thigh-stretch-roll-back",
-  "cadillac-rolling-in-out-roll-back",
-] as const;
+/** Baseline catalog ships in the bundle; remote overlays follow hybrid rules in `@reformer/shared`. */
+import {
+  categoryPrefersSpringTension,
+  listFlatReformerExercises,
+  type DifficultyLevel,
+  type FlatReformerExercise,
+} from "@/lib/reformerExerciseCatalog";
+import { EXERCISE_MEDIA_MAP } from "@/lib/exerciseMediaMap";
 
-export type WorkoutExerciseId = (typeof WORKOUT_EXERCISE_IDS)[number];
+export type WorkoutExerciseId = string;
 
 /** Compatible with expo-image `source` (remote PNG/JPEG/GIF, or `require()` asset). */
 export type WorkoutExerciseMediaSource = string | { uri: string } | number;
 
 export type WorkoutExercise = {
   id: WorkoutExerciseId;
+  /** Primary headline (Turkish). */
   title: string;
-  /** Short line under title on pick cards (Turkish equipment/context). */
+  /** English name (secondary line on pick cards). */
   subtitle?: string;
+  categoryId: string;
+  categoryTitle: string;
+  categoryColor: string;
+  difficulties: readonly DifficultyLevel[];
   requiresSpringTension: boolean;
   media?: WorkoutExerciseMediaSource;
 };
 
-const catalog: WorkoutExercise[] = [
-  {
-    id: "mekik",
-    title: "Mekik",
-    subtitle: "Mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/01-mekik.jpg"),
-  },
-  {
-    id: "toe-tap-parmak",
-    title: "Toe Tap – Parmak Uçlarını Değdirme",
-    subtitle: "Mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/02-toe-tap.jpg"),
-  },
-  {
-    id: "arka-kol",
-    title: "Arka Kol Egzersizi",
-    subtitle: "Direnç lastiği",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/03-arka-kol-egzersizi.jpg"),
-  },
-  {
-    id: "side-kick",
-    title: "Side Kick",
-    subtitle: "Mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/04-side-kick.jpg"),
-  },
-  {
-    id: "pilates-topunu-yakala",
-    title: "Pilates Topunu Yakalama",
-    subtitle: "Pilates topu",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/05-pilates-topunu-yakalama.jpg"),
-  },
-  {
-    id: "kol-egzersizi",
-    title: "Kol Egzersizi",
-    subtitle: "Direnç lastiği",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/06-kol-egzersizi.jpg"),
-  },
-  {
-    id: "arka-bacak",
-    title: "Arka Bacak Egzersizi",
-    subtitle: "Mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/07-arka-bacak-egzersizi.jpg"),
-  },
-  {
-    id: "cember-egzersizi",
-    title: "Çember Egzersizi",
-    subtitle: "Pilates çemberi",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/08-cember-egzersizi.jpg"),
-  },
-  {
-    id: "pilates-topu-kopru",
-    title: "Pilates Topu ile Köprü",
-    subtitle: "Pilates topu · mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/09-pilates-topu-kopru.jpg"),
-  },
-  {
-    id: "yan-govde",
-    title: "Yan Gövde Egzersizi",
-    subtitle: "Pilates çemberi · mat",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/10-yan-govde.jpg"),
-  },
-  {
-    id: "cadillac-thigh-stretch-roll-back",
-    title: "Thigh Stretch with Roll Back Bar on the Cadillac",
-    subtitle: "Cadillac · roll back bar",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/11-thigh-stretch-cadillac.webp"),
-  },
-  {
-    id: "cadillac-rolling-in-out-roll-back",
-    title: "Rolling In and Out with Roll Back Bar on the Cadillac",
-    subtitle: "Cadillac · roll back bar",
-    requiresSpringTension: false,
-    media: require("../assets/workout-src-by-user/12-rolling-in-out-cadillac.webp"),
-  },
-];
+function toWorkoutExercise(f: FlatReformerExercise): WorkoutExercise {
+  return {
+    id: f.id,
+    title: f.titleTr,
+    subtitle: f.titleEn,
+    categoryId: f.categoryId,
+    categoryTitle: f.categoryTitle,
+    categoryColor: f.categoryColor,
+    difficulties: [...f.difficulties],
+    requiresSpringTension: categoryPrefersSpringTension(f.categoryId),
+    media: EXERCISE_MEDIA_MAP[f.id],
+  };
+}
+
+function buildCatalog(): WorkoutExercise[] {
+  return listFlatReformerExercises().map(toWorkoutExercise);
+}
+
+const catalog: WorkoutExercise[] = buildCatalog();
+
+const byId = new Map<string, WorkoutExercise>(
+  catalog.map((e) => [e.id, e])
+);
 
 export function listWorkoutExercises(): WorkoutExercise[] {
   return catalog;
 }
 
-export function getWorkoutExercise(
-  id: string | undefined
-): WorkoutExercise | null {
+export function getWorkoutExercise(id: string | undefined): WorkoutExercise | null {
   if (!id) return null;
-  const found = catalog.find((e) => e.id === id);
-  return found ?? null;
+  return byId.get(id) ?? null;
 }

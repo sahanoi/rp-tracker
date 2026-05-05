@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "description": "Temporary demo set: 3 exercises per category (42 total).",
+  "selection": [
+    { "categoryId": "breathing", "id": "breathing__breathing", "titleEn": "Breathing", "titleTr": "Temel Nefes", "reason": "Baseline breathing cue." },
+    { "categoryId": "breathing", "id": "breathing__lateral-breathing", "titleEn": "Lateral Breathing", "titleTr": "Lateral Nefes", "reason": "Rib-focused variation." },
+    { "categoryId": "breathing", "id": "breathing__diaphragmatic-breathing", "titleEn": "Diaphragmatic Breathing", "titleTr": "Diyafram Nefesi", "reason": "Abdominal breathing contrast." },
+
+    { "categoryId": "reformer-core", "id": "reformer-core__footwork-toes", "titleEn": "Footwork — Toes", "titleTr": "Ayak Çalışması (Parmaklar)", "reason": "Clear footbar toe placement." },
+    { "categoryId": "reformer-core", "id": "reformer-core__footwork-arches", "titleEn": "Footwork — Arches", "titleTr": "Ayak Çalışması (Kemeri)", "reason": "Distinct mid-foot contact." },
+    { "categoryId": "reformer-core", "id": "reformer-core__footwork-heels", "titleEn": "Footwork — Heels", "titleTr": "Ayak Çalışması (Topuklar)", "reason": "Distinct heel-only contact." },
+
+    { "categoryId": "reformer-rowing", "id": "reformer-rowing__rowing-into-the-sternum", "titleEn": "Rowing — Into the Sternum", "titleTr": "Kürek — Göğüse", "reason": "Core rowing position." },
+    { "categoryId": "reformer-rowing", "id": "reformer-rowing__rowing-90-degrees", "titleEn": "Rowing — 90 Degrees", "titleTr": "Kürek — 90 Derece", "reason": "Distinct arm angle variation." },
+    { "categoryId": "reformer-rowing", "id": "reformer-rowing__rowing-from-the-chest", "titleEn": "Rowing — From the Chest", "titleTr": "Kürek — Göğüsten", "reason": "Useful contrast in rowing phase." },
+
+    { "categoryId": "reformer-longbox", "id": "reformer-longbox__swan-on-long-box", "titleEn": "Swan on Long Box", "titleTr": "Kuğu (Uzun Kutu)", "reason": "Iconic long-box extension." },
+    { "categoryId": "reformer-longbox", "id": "reformer-longbox__pull-straps", "titleEn": "Pull Straps", "titleTr": "Kayış Çekme", "reason": "Simple prone pulling setup." },
+    { "categoryId": "reformer-longbox", "id": "reformer-longbox__t-pull", "titleEn": "T Pull", "titleTr": "T Çekme", "reason": "Clear T-arm shape." },
+
+    { "categoryId": "reformer-shortbox", "id": "reformer-shortbox__short-box-round", "titleEn": "Short Box — Round", "titleTr": "Kısa Kutu (Yuvarlak)", "reason": "Classic C-curve demo." },
+    { "categoryId": "reformer-shortbox", "id": "reformer-shortbox__short-box-flat", "titleEn": "Short Box — Flat", "titleTr": "Kısa Kutu (Düz)", "reason": "Neutral spine contrast." },
+    { "categoryId": "reformer-shortbox", "id": "reformer-shortbox__short-box-side-to-side", "titleEn": "Short Box — Side to Side", "titleTr": "Kısa Kutu (Yan Yan)", "reason": "Lateral flexion demo." },
+
+    { "categoryId": "reformer-stretch", "id": "reformer-stretch__long-stretch", "titleEn": "Long Stretch", "titleTr": "Uzun Germe", "reason": "Primary plank-family move." },
+    { "categoryId": "reformer-stretch", "id": "reformer-stretch__down-stretch", "titleEn": "Down Stretch", "titleTr": "Aşağı Germe", "reason": "Extension variation." },
+    { "categoryId": "reformer-stretch", "id": "reformer-stretch__up-stretch", "titleEn": "Up Stretch", "titleTr": "Yukarı Germe", "reason": "Pike-style variation." },
+
+    { "categoryId": "reformer-straps", "id": "reformer-straps__feet-in-straps-circles", "titleEn": "Feet in Straps — Circles", "titleTr": "Kayışta Bacak Çevrimleri", "reason": "Most representative straps move." },
+    { "categoryId": "reformer-straps", "id": "reformer-straps__feet-in-straps-frogs", "titleEn": "Feet in Straps — Frogs", "titleTr": "Kayışta Kurbağa", "reason": "Easy-to-read leg shape." },
+    { "categoryId": "reformer-straps", "id": "reformer-straps__feet-in-straps-lower-lift", "titleEn": "Feet in Straps — Lower / Lift", "titleTr": "Kayışta İniş / Kaldırma", "reason": "Controlled vertical range demo." },
+
+    { "categoryId": "reformer-advanced", "id": "reformer-advanced__snake", "titleEn": "Snake", "titleTr": "Yılan", "reason": "Signature advanced shape." },
+    { "categoryId": "reformer-advanced", "id": "reformer-advanced__snake-and-twist", "titleEn": "Snake & Twist", "titleTr": "Yılan ve Bükülme", "reason": "Adds rotational complexity." },
+    { "categoryId": "reformer-advanced", "id": "reformer-advanced__corkscrew", "titleEn": "Corkscrew", "titleTr": "Tirbuşon", "reason": "Core advanced inversion cue." },
+
+    { "categoryId": "cadillac", "id": "cadillac__roll-down-rollback-bar", "titleEn": "Roll Down — Rollback Bar", "titleTr": "Geri Yatış (Rollback Bar)", "reason": "Cadillac frame readability." },
+    { "categoryId": "cadillac", "id": "cadillac__one-arm-roll-down", "titleEn": "One Arm Roll Down", "titleTr": "Tek Kol Geri Yatış", "reason": "Asymmetric progression." },
+    { "categoryId": "cadillac", "id": "cadillac__cadillac-breathing", "titleEn": "Cadillac Breathing", "titleTr": "Cadillac Nefesi", "reason": "Breath-on-equipment variant." },
+
+    { "categoryId": "mat", "id": "mat__the-hundred", "titleEn": "The Hundred", "titleTr": "Yüzler (Mat)", "reason": "Foundational mat icon." },
+    { "categoryId": "mat", "id": "mat__roll-up", "titleEn": "Roll Up", "titleTr": "Yuvarlanarak Kalkma", "reason": "Classic articulation move." },
+    { "categoryId": "mat", "id": "mat__roll-over", "titleEn": "Roll Over", "titleTr": "Yuvarlanarak Geçme", "reason": "Advanced mat contrast." },
+
+    { "categoryId": "ball", "id": "ball__hundred-with-ball", "titleEn": "Hundred with Ball", "titleTr": "Yüzler (Topla)", "reason": "Ball integration with familiar pattern." },
+    { "categoryId": "ball", "id": "ball__bridge-with-ball", "titleEn": "Bridge with Ball", "titleTr": "Köprü (Topla)", "reason": "Clear posterior-chain shape." },
+    { "categoryId": "ball", "id": "ball__ball-between-thighs-plie", "titleEn": "Ball Between Thighs — Plié", "titleTr": "Uyluklarda Top — Plié", "reason": "Readable standing variation." },
+
+    { "categoryId": "magic-circle", "id": "magic-circle__hundred-with-magic-circle", "titleEn": "Hundred with Magic Circle", "titleTr": "Yüzler (Halkaya)", "reason": "Easy circle prop recognition." },
+    { "categoryId": "magic-circle", "id": "magic-circle__rolling-like-a-ball-circle", "titleEn": "Rolling Like a Ball — Circle", "titleTr": "Top Yuvarlanması (Halkaya)", "reason": "Prop + rolling combo." },
+    { "categoryId": "magic-circle", "id": "magic-circle__bridge-with-circle-inner-thigh", "titleEn": "Bridge with Circle — Inner Thigh", "titleTr": "Köprü — İç Uyluk (Halkaya)", "reason": "Inner-thigh squeeze cue." },
+
+    { "categoryId": "chair", "id": "chair__footwork-on-chair", "titleEn": "Footwork on Chair", "titleTr": "Ayak Çalışması (Sandalye)", "reason": "Chair equipment introduction." },
+    { "categoryId": "chair", "id": "chair__pump-seated", "titleEn": "Pump — Seated", "titleTr": "Oturarak Pompa", "reason": "Beginner-friendly chair pose." },
+    { "categoryId": "chair", "id": "chair__pump-standing", "titleEn": "Pump — Standing", "titleTr": "Ayakta Pompa", "reason": "Standing pedal contrast." },
+
+    { "categoryId": "barrel", "id": "barrel__spine-stretch-on-barrel", "titleEn": "Spine Stretch on Barrel", "titleTr": "Varil Üstü Omurga Germe", "reason": "Iconic arc use." },
+    { "categoryId": "barrel", "id": "barrel__swan-on-barrel", "titleEn": "Swan on Barrel", "titleTr": "Varil Üstü Kuğu", "reason": "Extension on barrel." },
+    { "categoryId": "barrel", "id": "barrel__side-stretch-on-barrel", "titleEn": "Side Stretch on Barrel", "titleTr": "Varil Üstü Yan Germe", "reason": "Lateral arc pattern." }
+  ]
+}
