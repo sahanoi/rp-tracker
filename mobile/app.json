@@ -42,7 +42,7 @@
         "enableCoachClientV1": true,
         "enableSessionMergePrompts": true
       },
-      "firebaseApiKey": "AIzaSyBlF_ACCc-6JJWJLj5HwK6Yxj_0y-mmpco",
+      "firebaseApiKey": "",
       "firebaseAuthDomain": "reformer-pilates-tracker.firebaseapp.com",
       "firebaseProjectId": "reformer-pilates-tracker",
       "firebaseStorageBucket": "reformer-pilates-tracker.firebasestorage.app",
